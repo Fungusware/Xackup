@@ -1,3 +1,3 @@
 # Xackup - Backup for XenServer/XCP-ng
 
-This is the Stable channel for Xackup Releases
+A place for Xackup users to gather and find useful resources.
