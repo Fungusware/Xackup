@@ -5,6 +5,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.5.12.0 (Early Access)
 
+* Fixes for access to Scheduling.
 * UI fixes for Server details showing VERY large image.
 * Revised Details Veiwer.
 * UI Clean Ups.
