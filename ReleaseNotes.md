@@ -57,8 +57,7 @@ Find out what has changed in the Stable and Early Access versions.
 * Released to Stable.
 * Fixed issues with Replications always failing.
 * Fixed long UI update delay when running jobs inside the main UI.
-@** Saved Locations now serves as the defining point for all ‘Destinations’ – Quite a big change ![🙂](https://s.w.org/images/core/emoji/14.0.0/svg/1f642.svg)
-*@* Saved Locations now serves as the defining point for all ‘Destinations’ – Quite a big change 🙂"
+* Saved Locations now serves as the defining point for all ‘Destinations’ – Quite a big change 🙂
 * Changes to the execution of Chained Jobs to be more ‘Contained’
 * Fixed ‘bitness’ of Job Runner,  which causing x86 systems to fail.
 * UI Updates to the Hypervoisor Explorer.
