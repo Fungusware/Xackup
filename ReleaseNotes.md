@@ -3,8 +3,9 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.5.12.0 (Early Access)
+###### Version 2.5.17.0 (Early Access)
 
+* Remote support Updates.
 * Fixes for access to Scheduling.
 * UI fixes for Server details showing VERY large image.
 * Revised Details Veiwer.
@@ -16,8 +17,9 @@ Find out what has changed in the Stable and Early Access versions.
 * Brand new Scheduling system. Moves away from Windows Task Scheduler.
 * Backend improvements to Xackup Server and API
 
-###### Version 2.4.24.0 (Stable Release)
+###### Version 2.4.27.0 (Stable Release)
 
+* Remote support Updates.
 * Changed default Location when adding Saved Locations or Browsing for destinations.
 * Detect and Log when a Job fails to load correctly.
 * Modified the way Pre and Post Tasks are launched. Console windows should now be visible again.
