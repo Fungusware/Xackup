@@ -3,8 +3,9 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.5.17.0 (Early Access)
+###### Version 2.5.21.0 (Early Access)
 
+* Fixes for browsing and testing CIFS/NFS and other Linux Mounts
 * Remote support Updates.
 * Fixes for access to Scheduling.
 * UI fixes for Server details showing VERY large image.
