@@ -3,7 +3,7 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.5.23.0 (Early Access)
+###### Version 2.5.23.0 (Stable)
 
 * Added custom mount commands per Saved Location for Backup and Restore.
 * Fixed UI feedback and progress reporting during Restore operations.
