@@ -3,6 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.6.1.0 (Early Access)
+
+* Fixed crash when trying to determine host information if no host were found.
+
 ###### Version 2.5.28.0 (Stable)
 
 * Fixed crash when trying to determine host information if no host were found.
