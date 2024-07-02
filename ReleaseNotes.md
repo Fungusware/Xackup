@@ -3,8 +3,9 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.6.1.0 (Early Access)
+###### Version 2.6.2.0 (Early Access)
 
+* Added feature to use a password on Client compressed backups.
 * Fixed crash when trying to determine host information if no host were found.
 
 ###### Version 2.5.28.0 (Stable)
