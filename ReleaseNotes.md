@@ -8,8 +8,9 @@ Find out what has changed in the Stable and Early Access versions.
 * Added feature to use a password on Client compressed backups.
 * Fixed crash when trying to determine host information if no host were found.
 
-###### Version 2.5.28.0 (Stable)
+###### Version 2.5.29.0 (Stable)
 
+* Fix for adding new Saved Locations.
 * Fixed crash when trying to determine host information if no host were found.
 * Added resilient connections for older XenServers.
 * Added custom mount commands per Saved Location for Backup and Restore.
