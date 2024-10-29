@@ -3,10 +3,20 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.6.3.0 (Early Access)
+
+* User friendly messages when API errors occur.
+* Removed equirement for a 'Saved Location' on Restore.
+
 ###### Version 2.6.2.0 (Early Access)
 
 * Added feature to use a password on Client compressed backups.
 * Fixed crash when trying to determine host information if no hosts were found.
+
+###### Version 2.5.30.0 (Stable)
+
+* User friendly messages when API errors occur.
+* Removed equirement for a 'Saved Location' on Restore.
 
 ###### Version 2.5.29.0 (Stable)
 
