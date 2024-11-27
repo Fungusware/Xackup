@@ -3,6 +3,11 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.6.5.0 (Early Access)
+
+* Fix issue with missing SSHHost when browsing for a Local Location
+* Improved messages when API errors occur.
+
 ###### Version 2.6.3.0 (Early Access)
 
 * User friendly messages when API errors occur.
@@ -12,6 +17,11 @@ Find out what has changed in the Stable and Early Access versions.
 
 * Added feature to use a password on Client compressed backups.
 * Fixed crash when trying to determine host information if no hosts were found.
+
+###### Version 2.5.32.0 (Stable)
+
+* Fix issue with missing SSHHost when browsing for a Local Location
+* Improved messages when API errors occur.
 
 ###### Version 2.5.30.0 (Stable)
 
