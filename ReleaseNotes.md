@@ -3,6 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.6.6.0 (Early Access)
+
+* Allows logging of Pre and Post Tasks during testing and Job execution.
+
 ###### Version 2.6.5.0 (Early Access)
 
 * Fix issue with missing SSHHost when browsing for a Local Location
