@@ -3,9 +3,14 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.8.0.0 (Early Access)
+
+* Switching to .NET 8
+
 ###### Version 2.6.7.1 (Stable)
 
-* Move to Stable Channel
+* New format for saving Pre and Post Tasks.
+* Move to Stable Channel.
 * Possible fix for 'Humanizer' error in some locales.
 
 ###### Version 2.6.6.0 (Early Access)
