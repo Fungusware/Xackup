@@ -3,8 +3,9 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.6.7.0 (Early Access)
+###### Version 2.6.7.1 (Stable)
 
+* Move to Stable Channel
 * Possible fix for 'Humanizer' error in some locales.
 
 ###### Version 2.6.6.0 (Early Access)
