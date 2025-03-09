@@ -3,6 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.6.7.0 (Early Access)
+
+* Possible fix for 'Humanizer' error in some locales.
+
 ###### Version 2.6.6.0 (Early Access)
 
 * Allows logging of Pre and Post Tasks during testing and Job execution.
