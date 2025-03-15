@@ -3,8 +3,9 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.8.0.0 (Early Access)
+###### Version 2.8.0.1 (Early Access)
 
+* Fixed incorrect .NET 8 Bitness in installer.
 * Switching to .NET 8
 
 ###### Version 2.6.7.1 (Stable)
