@@ -3,9 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.8.1.0 (Early Access)
+###### Version 2.8.2.0 (Early Access)
 
 * Fixes for Extraction and Restore operations with Password Protected Backups
+* Support for 'blank' Compression password on Restore.
 
 ###### Version 2.8.0.1 (Early Access)
 
