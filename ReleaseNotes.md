@@ -13,9 +13,10 @@ Find out what has changed in the Stable and Early Access versions.
 * Fixed incorrect .NET 8 Bitness in installer.
 * Switching to .NET 8
 
-###### Version 2.6.8.1 (Early Access)
+###### Version 2.6.9.0 (Stable)
 
 * Fixes for Extraction and Restore operations with Password Protected Backups
+* Support for 'blank' Compression password on Restore.
 
 ###### Version 2.6.7.1 (Stable)
 
