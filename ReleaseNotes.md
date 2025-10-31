@@ -3,6 +3,11 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.8.4.0 (Early Access)
+
+* Alternate way to auto discover restore file types.
+* Fix Web Portal interactivity.
+
 ###### Version 2.8.2.0 (Early Access)
 
 * Fixes for Extraction and Restore operations with Password Protected Backups
