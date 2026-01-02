@@ -3,6 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.8.5.0 (Stable)
+
+* Move into the Stable channel.
+
 ###### Version 2.8.4.0 (Early Access)
 
 * Alternate way to auto discover restore file types.
