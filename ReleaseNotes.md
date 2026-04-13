@@ -3,6 +3,13 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 2.10.0.0 (Early Access)
+
+* Major UI Overhaul
+* Saved Server nomalization.
+* Restore from SSH fixes.
+* General Usability enhancements.
+
 ###### Version 2.8.5.0 (Stable)
 
 * Move into the Stable channel.
