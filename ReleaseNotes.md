@@ -3,9 +3,10 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.10.0.0 (Early Access)
+###### Version 2.10.x.0 (Early Access)
 
-* Major UI Overhaul
+* Fixed Retention issue with some Date Formats.
+* Major UI Overhaul.
 * Saved Server nomalization.
 * Restore from SSH fixes.
 * General Usability enhancements.
