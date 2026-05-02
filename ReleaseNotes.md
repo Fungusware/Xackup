@@ -5,6 +5,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.10.x.0 (Early Access)
 
+* Introduce the Job Info Panel
 * Fixed Retention issue with some Date Formats.
 * Major UI Overhaul.
 * Saved Server nomalization.
