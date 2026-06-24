@@ -5,7 +5,6 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Early Access)
 
-* Export and Import Jobs Backups to the Xackup Cloud.
 * New Charting displays.
 * AI Log analysis -- if that helps anyone.
 * Job Panel completed
