@@ -3,13 +3,13 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 2.11.x.0 (Coming Soon)
+###### Version 2.11.x.0 (Early Access)
 
 * New Charting displays.
 * AI Log analysis -- if that helps anyone.
 * Job Panel completed
 
-###### Version 2.10.x.0 (Early Access)
+###### Version 2.10.x.0 (Depricated)
 
 * Introduce the Job Info Panel
 * Fixed Retention issue with some Date Formats.
