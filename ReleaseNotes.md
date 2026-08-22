@@ -5,10 +5,13 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* Quality release. Many usability and functional changes. Especially on new installs.
+* Bundled settings exporting / importing for JObs, Servers and Locations.
 * Fixed Error when checking Product version.
 
 ###### Version 2.11.x.0 (Stable)
 
+* Quality release. Many usability and functional changes. Especially on new installs.
 * Fixed Error when checking Product version.
 * Restore from SSH fixes.
 * New Charting displays.
