@@ -13,6 +13,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Stable)
 
+* Allow exporting to Xackup Cloud.
 * Increased Export speeds
 * Simplified Xackup Logs
 * Quality release. Many usability and functional changes. Especially on new installs.
