@@ -5,6 +5,10 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+•	Job processing and queue handling updates for more dependable background task execution.
+•	Logging improvements for VM-related activity to make diagnostics and support easier.
+•	Additional fix for a potential mapping issue to improve stability in edge cases.
+* Allow exporting to Xackup Cloud.
 * Increased Export speeds
 * Simplified Xackup Logs
 * Quality release. Many usability and functional changes. Especially on new installs.
@@ -13,6 +17,9 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Stable)
 
+•	Job processing and queue handling updates for more dependable background task execution.
+•	Logging improvements for VM-related activity to make diagnostics and support easier.
+•	Additional fix for a potential mapping issue to improve stability in edge cases.
 * Allow exporting to Xackup Cloud.
 * Increased Export speeds
 * Simplified Xackup Logs
