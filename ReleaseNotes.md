@@ -5,6 +5,8 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* Fixes for Licence Check in Wizards.
+• Numerous fixes to address UI layout issues. This will be on going.
 •	Job processing and queue handling updates for more dependable background task execution.
 •	Logging improvements for VM-related activity to make diagnostics and support easier.
 •	Additional fix for a potential mapping issue to improve stability in edge cases.
