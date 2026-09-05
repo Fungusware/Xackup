@@ -5,6 +5,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
 • Numerous fixes to address UI layout issues. This will be on going.
 •	Job processing and queue handling updates for more dependable background task execution.
@@ -19,6 +20,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Stable)
 
+* Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
 • Numerous fixes to address UI layout issues. This will be on going.
 •	Job processing and queue handling updates for more dependable background task execution.
