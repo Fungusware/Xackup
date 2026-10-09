@@ -9,6 +9,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* Export / Import speed improvements (upto 4x on high latency connections)
 * Fixed some Saved Location editing bugs.
 * Added Main Toolbar Refresh buton added.
 * Fixed UI layout in Job Info Panels
