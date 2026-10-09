@@ -3,8 +3,13 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
+###### Version 3.0.x.0 (Development)
+
+* Comming Soon
+
 ###### Version 2.12.x.0 (Early Access)
 
+* Fixed some Saved Location editing bugs.
 * Added Main Toolbar Refresh buton added.
 * Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
@@ -21,6 +26,7 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Stable)
 
+* Fixed some Saved Location editing bugs.
 * Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
 • Numerous fixes to address UI layout issues. This will be on going.
