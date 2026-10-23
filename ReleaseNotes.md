@@ -9,6 +9,9 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* Fixed differential replication to XCP-ng 8.3 failing with VDI_IO_ERROR when sending a delta. Deltas are now measured before they are sent.
+* Fixed differential replication reporting complete before every disk had finished copying.
+* The Use Temporary files option is now on the Retention and Differentials tab of the replication wizard, and the Options tab is no longer hidden when differentials are on.
 * Export / Import speed improvements (upto 4x on high latency connections)
 * Fixed some Saved Location editing bugs.
 * Added Main Toolbar Refresh buton added.
@@ -27,6 +30,9 @@ Find out what has changed in the Stable and Early Access versions.
 
 ###### Version 2.11.x.0 (Stable)
 
+* Fixed differential replication to XCP-ng 8.3 failing with VDI_IO_ERROR when sending a delta. Deltas are now measured before they are sent.
+* Fixed differential replication reporting complete before every disk had finished copying.
+* The Use Temporary files option is now on the Retention and Differentials tab of the replication wizard, and the Options tab is no longer hidden when differentials are on.
 * Fixed some Saved Location editing bugs.
 * Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
