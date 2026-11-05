@@ -14,6 +14,18 @@ Xackup is a commercial product that can be found here : https://www.xenserver-ba
 
 # Install
 
+## One command
+
+Open PowerShell as Administrator and run:
+
+```powershell
+irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
+```
+
+It downloads the newest release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run). To install one particular version, set `$env:XACKUP_DESKTOP_VERSION` first, for example `$env:XACKUP_DESKTOP_VERSION = '2.12.15.0'`.
+
+## Download
+
 Download the newest release from the [Releases](https://github.com/Fungusware/Xackup/releases) page. Two packages are attached to each release; use either one.
 
 **Setup program** - `Install_Xackup_<version>.zip`
@@ -40,7 +52,7 @@ It installs the .NET runtimes Xackup needs if they are missing (internet access 
 
 ## Upgrade
 
-Run the installer from the newer release. Your jobs, saved servers and licence are kept.
+Run the one command again, or run the installer from the newer release. Your jobs, saved servers and licence are kept.
 
 ## Remove
 
