@@ -14,7 +14,16 @@ Xackup is a commercial product that can be found here : https://www.xenserver-ba
 
 # Install
 
-## One command
+Xackup 2.12 is the stable release. There is one release channel. Install with the Windows Installer or with PowerShell; both are supported and give the same result.
+
+## Windows Installer
+
+1. Download `Install_Xackup_<version>.zip` from the [Releases](https://github.com/Fungusware/Xackup/releases) page and unzip it.
+2. Run `Install_Xackup_<version>.exe`.
+
+To upgrade, run the newer Windows Installer. To remove, uninstall **Xackup v2** in Apps & features.
+
+## PowerShell
 
 Open PowerShell as Administrator and run:
 
@@ -24,46 +33,30 @@ irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1
 
 It downloads the newest release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run).
 
-Xackup 2.12 is the stable release. There is one release channel.
-
 **One particular version** (to go back to an earlier release):
 
 ```powershell
 $env:XACKUP_DESKTOP_VERSION = '2.12.15.0'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
 ```
 
-## Download
+**Without internet access to GitHub raw:** download `Xackup-Desktop-win-x86.zip` from the Releases page, unzip it, open PowerShell as Administrator in the folder and run:
 
-Download the newest release from the [Releases](https://github.com/Fungusware/Xackup/releases) page. Two packages are attached to each release; use either one.
+```
+.\Install-XackupDesktop.ps1
+```
 
-**Setup program** - `Install_Xackup_<version>.zip`
+If PowerShell says running scripts is disabled, run this instead (this one run only):
 
-Unzip it and run the installer.
+```
+powershell -ExecutionPolicy Bypass -File .\Install-XackupDesktop.ps1
+```
 
-**PowerShell** - `Xackup-Desktop-win-x86.zip`
+The installer adds the .NET runtimes Xackup needs if they are missing (internet access is needed for that), installs the Xackup service and the desktop app, and asks whether other computers may connect to this Xackup service (if so, it opens the port in the Windows firewall). A Windows Installer install is removed first; your jobs and settings are kept.
 
-1. Unzip it.
-2. Open PowerShell as Administrator in the folder.
-3. Run:
+### Upgrade backup
 
-   ```
-   .\Install-XackupDesktop.ps1
-   ```
+When it finds existing data, the installer asks whether to back it up first (the default is yes). If you say yes, it zips your data folder (`C:\ProgramData\Fungusware\Xackup`) to `C:\ProgramData\Fungusware\Xackup-backups` before it replaces the program files. The newest five backups are kept. Add `-NoBackup` to skip the question and the backup; with `-Unattended` the backup is made without asking. To go back to an earlier version, install it with the one-particular-version command above, then unzip the backup over the data folder.
 
-   If PowerShell says running scripts is disabled, run this instead (this one run only):
-
-   ```
-   powershell -ExecutionPolicy Bypass -File .\Install-XackupDesktop.ps1
-   ```
-
-It installs the .NET runtimes Xackup needs if they are missing (internet access is needed for that), installs the Xackup service and the desktop app, and asks whether other computers may connect to this Xackup service (if so, it opens the port in the Windows firewall). An earlier setup-program install is removed first; your jobs and settings are kept.
-
-## Upgrade
-
-Run the one command again, or run the installer from the newer release. Your jobs, saved servers and licence are kept.
-
-Before it replaces the program files, the installer zips your data folder (`C:\ProgramData\Fungusware\Xackup`) to `C:\ProgramData\Fungusware\Xackup-backups`. The newest five backups are kept; add `-NoBackup` to the installer to skip it. To go back to an earlier version, install it with the one-particular-version command above, then unzip the backup over the data folder.
-
-## Remove
+### Remove
 
 Run `.\Uninstall-XackupDesktop.ps1` (add `-Purge` to delete your data too), or remove **Xackup v2** in Apps & features.
