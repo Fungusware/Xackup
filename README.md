@@ -22,7 +22,21 @@ Open PowerShell as Administrator and run:
 irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
 ```
 
-It downloads the newest release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run). To install one particular version, set `$env:XACKUP_DESKTOP_VERSION` first, for example `$env:XACKUP_DESKTOP_VERSION = '2.12.15.0'`.
+It downloads the newest **Stable** release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run).
+
+**Early Access:** for the newest Early Access release instead, run:
+
+```powershell
+$env:XACKUP_CHANNEL = 'early'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
+```
+
+(Until a Stable release includes the PowerShell installer, use the Early Access command.)
+
+**One particular version:**
+
+```powershell
+$env:XACKUP_DESKTOP_VERSION = '2.12.15.0'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
+```
 
 ## Download
 
