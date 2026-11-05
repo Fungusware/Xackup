@@ -6,15 +6,18 @@
 # -ExecutionPolicy Bypass (for this run only). The installer asks you about the settings; to give them as options instead, download the zip
 # from the Xackup releases page and run Install-XackupDesktop.ps1 yourself (add -Unattended to ask nothing).
 #
-# Channel: it takes the newest Stable release. For the newest Early Access release instead, either of these:
+# It installs the newest release. There is one release channel (the old Stable / Early Access split is gone).
 #
-#   $env:XACKUP_CHANNEL = 'early'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
-#   & ([scriptblock]::Create((irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1))) -Channel early
+# One particular version (to go back to an earlier release):
 #
-# One particular version: -Version 2.12.15.0 in the second form, or set $env:XACKUP_DESKTOP_VERSION first.
+#   & ([scriptblock]::Create((irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1))) -Version 2.12.15.0
+#
+# or set $env:XACKUP_DESKTOP_VERSION first.
 param(
-    [ValidateSet('stable', 'early')][string]$Channel = $(if ($env:XACKUP_CHANNEL) { $env:XACKUP_CHANNEL } else { 'stable' }),
-    [string]$Version = $env:XACKUP_DESKTOP_VERSION
+    [string]$Version = $env:XACKUP_DESKTOP_VERSION,
+
+    # Accepted and ignored, so command lines written for the old Stable / Early Access channels keep working
+    [string]$Channel
 )
 
 & {
@@ -34,21 +37,17 @@ param(
         $url = "https://github.com/$repo/releases/download/$Version/$asset"
     }
     else {
-        # Desktop releases are the ones tagged 2.* that carry the package (the web UI's are tagged 3.*). Stable releases are not
-        # marked pre-release on GitHub; Early Access ones are. Take the highest version in the channel.
+        # Desktop releases are the ones tagged 2.* that carry the package (the web UI's are tagged 3.*). Take the highest version;
+        # whether GitHub marks a release as pre-release does not matter.
         $releases = Invoke-RestMethod "https://api.github.com/repos/$repo/releases?per_page=30" -Headers @{ 'User-Agent' = 'Xackup-Desktop-Install' }
         $candidates = $releases | Where-Object {
-            -not $_.draft -and $_.tag_name -like '2.*' -and ($Channel -eq 'early' -or -not $_.prerelease) -and
-            ($_.assets | Where-Object { $_.name -eq $asset })
+            -not $_.draft -and $_.tag_name -like '2.*' -and ($_.assets | Where-Object { $_.name -eq $asset })
         }
         $newest = $candidates | Sort-Object { [version]($_.tag_name.TrimStart('v')) } -Descending | Select-Object -First 1
         if (-not $newest) {
-            if ($Channel -eq 'stable') {
-                throw "No Stable Xackup release has the PowerShell installer ($asset) yet. For the newest Early Access release, set `$env:XACKUP_CHANNEL = 'early' first, or download a release from https://github.com/$repo/releases"
-            }
             throw "No Xackup desktop release with $asset was found at https://github.com/$repo/releases"
         }
-        Write-Host "Xackup $($newest.tag_name) ($(if ($newest.prerelease) { 'Early Access' } else { 'Stable' }))"
+        Write-Host "Xackup $($newest.tag_name)"
         $url = ($newest.assets | Where-Object { $_.name -eq $asset }).browser_download_url
     }
 
