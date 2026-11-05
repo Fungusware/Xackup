@@ -22,17 +22,11 @@ Open PowerShell as Administrator and run:
 irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
 ```
 
-It downloads the newest **Stable** release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run).
+It downloads the newest release and runs its installer, which asks a few questions. Run the same command again to upgrade. It works whatever the script execution policy is (the installer runs with it bypassed for this one run).
 
-**Early Access:** for the newest Early Access release instead, run:
+Xackup 2.12 is the stable release. There is one release channel.
 
-```powershell
-$env:XACKUP_CHANNEL = 'early'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
-```
-
-(Until a Stable release includes the PowerShell installer, use the Early Access command.)
-
-**One particular version:**
+**One particular version** (to go back to an earlier release):
 
 ```powershell
 $env:XACKUP_DESKTOP_VERSION = '2.12.15.0'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/desktop/install.ps1 | iex
@@ -67,6 +61,8 @@ It installs the .NET runtimes Xackup needs if they are missing (internet access 
 ## Upgrade
 
 Run the one command again, or run the installer from the newer release. Your jobs, saved servers and licence are kept.
+
+Before it replaces the program files, the installer zips your data folder (`C:\ProgramData\Fungusware\Xackup`) to `C:\ProgramData\Fungusware\Xackup-backups`. The newest five backups are kept; add `-NoBackup` to the installer to skip it. To go back to an earlier version, install it with the one-particular-version command above, then unzip the backup over the data folder.
 
 ## Remove
 
