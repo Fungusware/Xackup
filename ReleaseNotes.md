@@ -146,7 +146,6 @@ Find out what has changed in the Stable and Early Access versions.
 * Modified the way Pre and Post Tasks are launched. Console windows should now be visible again.
 * Fixed: Messed up Location Browsing and Saved Location screens.
 * Fixed: Chained Jobs settings error.
-* Added initial support for RustDesk remote help.
 * Fixed: Missing dependencies causing start up to fail.
 * Fixed: UI Layout bugs
 * Fixed: Backup error claiming the API was not running.
