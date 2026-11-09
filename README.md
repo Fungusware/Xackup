@@ -94,7 +94,9 @@ $env:XACKUP_SERVER_VERSION = '3.26.1109.1030'; irm https://raw.githubusercontent
 curl -fsSL https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.sh | sudo bash
 ```
 
-Options go after `--`, for example `... | sudo bash -s -- --port 8080 --local-only`. To install one particular version: `sudo XACKUP_SERVER_VERSION=3.26.1109.1030 bash install.sh`. Or download `Xackup-Server-linux-x64.tar.gz` (or `-linux-arm64`) from the Releases page, unpack it and run `sudo ./install-xackup-server.sh`.
+Options go after `--`, for example `... | sudo bash -s -- --port 8080 --local-only`. To install one particular version: `sudo XACKUP_SERVER_VERSION=3.26.1109.1030 bash install.sh`.
+
+If `curl` fails with `no common encryption algorithm` (an old curl on some NAS), use wget for the first step instead: `wget -qO- https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.sh | sudo bash`. If neither can reach GitHub, download the package on another computer (see below), copy it to the machine, and run `tar -xzf Xackup-Server-linux-x64.tar.gz && sudo ./install-xackup-server.sh`. Or download `Xackup-Server-linux-x64.tar.gz` (or `-linux-arm64`) from the Releases page, unpack it and run `sudo ./install-xackup-server.sh`.
 
 The service is `xackup-server`. Data is in `/var/lib/xackup-server`, saved servers and locations in `/usr/share/Fungusware/Xackup`, settings in `/etc/xackup-server/server.env`. Remove with `sudo ./uninstall-xackup-server.sh` (add `--purge` to delete the data). On Synology DSM 7, run the installer over SSH as an administrator with `sudo`.
 
