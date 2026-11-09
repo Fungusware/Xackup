@@ -37,7 +37,11 @@ fetch() {   # fetch URL -> stdout. Tries curl, then wget: an old curl (for examp
 
 download() {   # download URL FILE
   if command -v curl >/dev/null 2>&1 && curl -fL# -o "$2" "$1"; then return 0; fi
-  if command -v wget >/dev/null 2>&1 && wget -q --show-progress -O "$2" "$1"; then return 0; fi
+  # old wget (CentOS 7 has 1.14) does not know --show-progress, so try it first and then fall back to a plain download
+  if command -v wget >/dev/null 2>&1; then
+    wget -q --show-progress -O "$2" "$1" 2>/dev/null && return 0
+    wget -nv -O "$2" "$1" && return 0
+  fi
   return 1
 }
 
