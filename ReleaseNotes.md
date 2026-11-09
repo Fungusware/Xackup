@@ -31,6 +31,9 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 
 ###### Version 2.12.x.0 (Early Access)
 
+* The File menu item Web Portal is now Xackup Server and opens the server's web page. Xackup Server, the whole of Xackup managed from a browser, is coming; see the Xackup Server section of the README for the preview.
+* A short note in the bottom bar says Xackup Server is coming. Click Hide to remove it for good.
+
 * Fixed differential replication to XCP-ng 8.3 failing with VDI_IO_ERROR when sending a delta. Deltas are now measured before they are sent.
 * Fixed differential replication reporting complete before every disk had finished copying.
 * The Use Temporary files option is now on the Retention and Differentials tab of the replication wizard, and the Options tab is no longer hidden when differentials are on.
