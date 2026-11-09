@@ -66,7 +66,7 @@ Run `.\Uninstall-XackupDesktop.ps1` (add `-Purge` to delete your data too), or r
 
 Xackup Server runs Xackup as a service on Windows or Linux and gives you the whole of Xackup in a browser. Scheduled jobs run on the server, so nobody has to be signed in. It is the 3.x preview and is released next to Xackup 2.12: Xackup 2.12 and the desktop installers above are unchanged.
 
-Requirements: Windows 10 (1607) or Windows Server 2016 and newer, 64-bit; or Linux x64 or ARM64 with systemd. Tested on Synology DSM 7. Xackup Server brings its own .NET runtime.
+Requirements: Windows 10 (1607) or Windows Server 2016 and newer, 64-bit; or Linux x64 or ARM64 with systemd. Tested on Synology DSM 7 (also as a package). Xackup Server brings its own .NET runtime.
 
 ## Windows
 
@@ -98,7 +98,21 @@ Options go after `--`, for example `... | sudo bash -s -- --port 8080 --local-on
 
 If `curl` fails with `no common encryption algorithm` (an old curl on some NAS), use wget for the first step instead: `wget -qO- https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.sh | sudo bash`. If neither can reach GitHub, download the package on another computer (see below), copy it to the machine, and run `tar -xzf Xackup-Server-linux-x64.tar.gz && sudo ./install-xackup-server.sh`. Or download `Xackup-Server-linux-x64.tar.gz` (or `-linux-arm64`) from the Releases page, unpack it and run `sudo ./install-xackup-server.sh`.
 
-The service is `xackup-server`. Data is in `/var/lib/xackup-server`, saved servers and locations in `/usr/share/Fungusware/Xackup`, settings in `/etc/xackup-server/server.env`. Remove with `sudo ./uninstall-xackup-server.sh` (add `--purge` to delete the data). On Synology DSM 7, run the installer over SSH as an administrator with `sudo`.
+The service is `xackup-server`. Data is in `/var/lib/xackup-server`, saved servers and locations in `/usr/share/Fungusware/Xackup`, settings in `/etc/xackup-server/server.env`. Remove with `sudo ./uninstall-xackup-server.sh` (add `--purge` to delete the data). On Synology DSM 7, run the installer over SSH as an administrator with `sudo`, or use the Synology package below.
+
+## Synology DSM 7 package (.spk)
+
+On a Synology NAS you can install Xackup Server as a package instead of with the script. Run it on the NAS that stores your backups and the backup traffic no longer crosses the network twice.
+
+1. Download the package for your NAS from the [Releases](https://github.com/Fungusware/Xackup/releases) page: `XackupServer-x64-<version>.spk` for Intel and AMD models, `XackupServer-arm64-<version>.spk` for ARM64 models. Not supported: DSM 6 and 32-bit ARM models.
+2. In **Package Center > Settings > General**, set **Trust Level** to **Any publisher**. The package is not signed.
+3. In Package Center choose **Manual Install**, select the `.spk` and finish the wizard.
+4. Give the package's user access to the folder that holds your backups: **Control Panel > Shared Folder**, select the share, **Edit > Permissions**, set **System internal user** to show `sc-XackupServer` and give it **Read/Write**.
+5. Open `http://<nas>:19177` (the **Open** button in Package Center) and sign in as described below.
+
+The package runs as its own limited user, because DSM 7 does not let third-party packages run as root. Its data is in `/var/packages/XackupServer/var`. Optional settings go in `/var/packages/XackupServer/var/server.env`, one `NAME=value` per line, for example `XackupAPIUrl=http://0.0.0.0:8080`; restart the package afterwards.
+
+To upgrade, install the newer `.spk` over the old one with Manual Install; your data is kept. The package does not check for updates itself, so watch the Releases page. To remove it, uninstall it in Package Center.
 
 ## First sign-in and updates
 
