@@ -1,4 +1,4 @@
-﻿Release Notes
+Release Notes
 =============
 
 Find out what has changed in the Stable and Early Access versions.
