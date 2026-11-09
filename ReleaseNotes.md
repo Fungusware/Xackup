@@ -1,11 +1,33 @@
-Release Notes
+﻿Release Notes
 =============
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 3.0.x.0 (Development)
+###### Version 3.0.x (Xackup Server, Preview)
 
-* Comming Soon
+Xackup Server is the Xackup service with a web page you manage from any browser. Install it from the Xackup Server section of the README.
+
+* New: Xackup Server runs as a service on Windows x64, Linux x64 and ARM64 (systemd), and was tested on Synology DSM 7. Scheduled jobs run on the server, so nobody has to be signed in.
+* One-line install for Windows (PowerShell) and Linux (shell), or unzip the package and run the installer. It starts at boot, listens on port 19177 and opens the firewall port when asked.
+* Upgrades in place and keeps jobs, saved servers and locations, users and the license. The web page shows an Update available button, with the command to run, when a newer release exists.
+* The Windows installer can install the Xackup desktop app with the server. The desktop app connects to the server on the same computer.
+* Sign in with Viewer and Operator accounts. A new install has one account, xackup, and asks for a new password at the first sign-in.
+* Overview: the 24 hour backup window, what is running now, what needs attention, and the last 30 days.
+* Live: every running job with the progress of each VM.
+* Jobs: Backup, Migration and Replication lists with filters (result, schedule, server, destination, group). Start, stop, unlock, resume failed VMs, clone and remove from the row.
+* Job page: run chart, run history with the log of each run, the job's settings and its VMs.
+* Job editor in the browser for Backup, Migration and Replication jobs, with the same rules and warnings as the desktop wizards: General, Machines, Destination, Compression, Retention, Tasks, Email and Advanced tabs, and a retention timeline.
+* Schedules: every schedule in plain words with its last result and next run. Add, edit, pause, remove and Run now. Timeline: every run of the last day to three months and what is due next.
+* Restore: bring a backup back as a new VM on a Xen server.
+* Benchmarks: transfer rate, size and duration per VM and per job, with compare and CSV export.
+* Configuration: saved servers (with a network scan to find hosts), locations, email defaults, mount commands and advanced settings. Import and export jobs, servers and locations as a bundle or through Xackup Cloud.
+* Utilities: a Xen explorer for browsing everything a server holds, and Clean Up, which runs in the background.
+* System: license activation, About and health checks, the server log, and the anonymous community transfer statistics.
+* Faster SMB backups (about 10 times) from full-size buffered writes, a watchdog for stalled transfers, and a timing line with a plain tip after every transfer.
+* Linux and Synology: jobs run on Linux with remote CIFS and NFS locations. Jobs imported from Windows that use a \server\share path are refused on Linux with a clear message, so give them a Linux location.
+* Desktop app (3.x): modern look with eight themes and outcome bars. It reconnects by itself when the server restarts.
+* License: only a valid Xackup Server license lets the web page change jobs, schedules and settings. With any other license, or none, the web page is read only: running jobs, existing schedules, start and stop, and restores still work. A Xackup Server license also unlocks the desktop app with every Elite feature.
+* Installer: the Windows installer is PowerShell and replaces the MSI. It removes an earlier Xackup 2.x install first and keeps its data.
 
 ###### Version 2.12.x.0 (Early Access)
 
