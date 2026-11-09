@@ -21,10 +21,24 @@ case "$(uname -m)" in
   *) echo "Error: Xackup Server runs on 64-bit Intel/AMD and 64-bit ARM, not $(uname -m)." >&2; exit 1 ;;
 esac
 
-fetch() {   # fetch URL -> stdout
-  if command -v curl >/dev/null 2>&1; then curl -fsSL -H 'Accept: application/vnd.github+json' "$1"
-  elif command -v wget >/dev/null 2>&1; then wget -qO- "$1"
-  else echo "Error: neither curl nor wget is installed." >&2; exit 1; fi
+fail_download() {
+  echo "Error: could not download from GitHub with curl or wget on this machine (an old TLS library is the usual cause)." >&2
+  echo "Download $ASSET from https://github.com/$REPO/releases on another computer, copy it here, then run:" >&2
+  echo "  tar -xzf $ASSET && sudo ./install-xackup-server.sh" >&2
+  exit 1
+}
+
+fetch() {   # fetch URL -> stdout. Tries curl, then wget: an old curl (for example NSS based) may not share a cipher with GitHub
+  local out
+  if command -v curl >/dev/null 2>&1 && out=$(curl -fsSL -H 'Accept: application/vnd.github+json' "$1" 2>/dev/null); then printf '%s\n' "$out"; return 0; fi
+  if command -v wget >/dev/null 2>&1 && wget -qO- "$1"; then return 0; fi
+  return 1
+}
+
+download() {   # download URL FILE
+  if command -v curl >/dev/null 2>&1 && curl -fL# -o "$2" "$1"; then return 0; fi
+  if command -v wget >/dev/null 2>&1 && wget -q --show-progress -O "$2" "$1"; then return 0; fi
+  return 1
 }
 
 ASSET="Xackup-Server-linux-$ARCH.tar.gz"
@@ -33,8 +47,8 @@ if [ -n "${XACKUP_SERVER_VERSION:-}" ]; then
   URL="https://github.com/$REPO/releases/download/$XACKUP_SERVER_VERSION/$ASSET"
 else
   # Xackup Server releases are the ones tagged 3.*; the list is newest first, so the first package found is the newest
-  URL=$(fetch "https://api.github.com/repos/$REPO/releases?per_page=30" \
-        | grep -o "https://github.com/$REPO/releases/download/3\.[0-9.]*/$ASSET" | head -n1 || true)
+  RELEASES=$(fetch "https://api.github.com/repos/$REPO/releases?per_page=30") || fail_download
+  URL=$(printf '%s\n' "$RELEASES" | grep -o "https://github.com/$REPO/releases/download/3\.[0-9.]*/$ASSET" | head -n1 || true)
   [ -n "$URL" ] || { echo "Error: no Xackup Server release with $ASSET was found at https://github.com/$REPO/releases" >&2; exit 1; }
 fi
 
@@ -42,8 +56,7 @@ DIR=$(mktemp -d)
 trap 'rm -rf "$DIR"' EXIT
 
 echo "Downloading $URL"
-if command -v curl >/dev/null 2>&1; then curl -fL# -o "$DIR/package.tar.gz" "$URL"
-else wget -q --show-progress -O "$DIR/package.tar.gz" "$URL"; fi
+download "$URL" "$DIR/package.tar.gz" || fail_download
 
 tar -xzf "$DIR/package.tar.gz" -C "$DIR"
 bash "$DIR/install-xackup-server.sh" "$@"
