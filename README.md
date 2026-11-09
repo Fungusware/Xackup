@@ -81,7 +81,7 @@ It downloads the newest Xackup Server release and runs its installer, which asks
 **One particular version:**
 
 ```powershell
-$env:XACKUP_SERVER_VERSION = '3.26.1109.1030'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.ps1 | iex
+$env:XACKUP_SERVER_VERSION = '3.26.1109.1129'; irm https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.ps1 | iex
 ```
 
 **Without internet access to GitHub raw:** download `Xackup-Server-win-x64.zip` from the Releases page, unzip it, open PowerShell as Administrator in the folder and run `.\Install-XackupServer.ps1` (or `powershell -ExecutionPolicy Bypass -File .\Install-XackupServer.ps1`). Options such as `-Port`, `-LocalOnly`, `-Desktop` and `-Unattended` are listed in `README.txt` in the package.
@@ -94,7 +94,7 @@ $env:XACKUP_SERVER_VERSION = '3.26.1109.1030'; irm https://raw.githubusercontent
 curl -fsSL https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.sh | sudo bash
 ```
 
-Options go after `--`, for example `... | sudo bash -s -- --port 8080 --local-only`. To install one particular version: `sudo XACKUP_SERVER_VERSION=3.26.1109.1030 bash install.sh`.
+Options go after `--`, for example `... | sudo bash -s -- --port 8080 --local-only`. To install one particular version: `sudo XACKUP_SERVER_VERSION=3.26.1109.1129 bash install.sh`.
 
 If `curl` fails with `no common encryption algorithm` (an old curl on some NAS), use wget for the first step instead: `wget -qO- https://raw.githubusercontent.com/Fungusware/Xackup/main/server/install.sh | sudo bash`. If neither can reach GitHub, download the package on another computer (see below), copy it to the machine, and run `tar -xzf Xackup-Server-linux-x64.tar.gz && sudo ./install-xackup-server.sh`. Or download `Xackup-Server-linux-x64.tar.gz` (or `-linux-arm64`) from the Releases page, unpack it and run `sudo ./install-xackup-server.sh`.
 
