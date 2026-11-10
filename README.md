@@ -124,6 +124,12 @@ Open `http://<server>:19177`. A new install has one account, `xackup` with the p
 
 The web page shows an **Update available** button, with the command to run, when a newer Xackup Server release is out. Xackup Server releases are the ones tagged `3.*`; they are marked as pre-releases and never replace Xackup 2.12 as the latest release.
 
+## Extracting files from a backup
+
+Choose **Utilities > Extract files**, pick a backup and open it. The disks, volumes and folders inside are shown as a tree. Tick files, folders or whole disks, then **Download** (a single file as it is, anything else as a zip) or **Save to a folder** on the server (a disk is saved as a VHD, and nothing already in the folder is overwritten).
+
+It opens .xva, .xackup, .x2m and .xva.gz backups, including password protected ones. A compressed or zipped backup is unpacked into the work folder first (**Configuration > Advanced**), so that folder needs as much free space as the backup holds. Differential (.xdiff) backups cannot be opened. Extract needs the Elite or Xackup Server license and an Operator account.
+
 ## License
 
 Only a Xackup Server license lets the web page change jobs, schedules and settings. With any other license, or none, the web page is read only: running jobs, existing schedules, start and stop, and restores still work. A Xackup Server license also unlocks the desktop app. Enter it on the License page.
