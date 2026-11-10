@@ -66,7 +66,7 @@ Run `.\Uninstall-XackupDesktop.ps1` (add `-Purge` to delete your data too), or r
 
 Xackup Server runs Xackup as a service on Windows or Linux and gives you the whole of Xackup in a browser. Scheduled jobs run on the server, so nobody has to be signed in. It is the 3.x preview and is released next to Xackup 2.12: Xackup 2.12 and the desktop installers above are unchanged.
 
-Requirements: Windows 10 (1607) or Windows Server 2016 and newer, 64-bit; or Linux x64 or ARM64 with systemd. Tested on Synology DSM 7 (also as a package). Xackup Server brings its own .NET runtime.
+Requirements: Windows 10 (1607) or Windows Server 2016 and newer, 64-bit; or Linux x64 or ARM64 with systemd. Tested on Synology DSM 7 (also as a package, see below). Xackup Server brings its own .NET runtime.
 
 ## Windows
 
@@ -102,17 +102,21 @@ The service is `xackup-server`. Data is in `/var/lib/xackup-server`, saved serve
 
 ## Synology DSM 7 package (.spk)
 
-On a Synology NAS you can install Xackup Server as a package instead of with the script. Run it on the NAS that stores your backups and the backup traffic no longer crosses the network twice.
+On a Synology NAS you can install Xackup Server as a package instead of with the script. Run it on the NAS that stores your backups and the backup traffic no longer crosses the network twice. Not supported: DSM 6 and 32-bit ARM models.
 
-1. Download the package for your NAS from the [Releases](https://github.com/Fungusware/Xackup/releases) page: `XackupServer-x64-<version>.spk` for Intel and AMD models, `XackupServer-arm64-<version>.spk` for ARM64 models. Not supported: DSM 6 and 32-bit ARM models.
-2. In **Package Center > Settings > General**, set **Trust Level** to **Any publisher**. The package is not signed.
-3. In Package Center choose **Manual Install**, select the `.spk` and finish the wizard.
+**Recommended: add the Fungusware package source.** Package Center then installs Xackup Server for you, picks the right build for your NAS and shows an **Update** button when a new version is out.
+
+1. In **Package Center > Settings > General**, set **Trust Level** to **Any publisher**. The packages are not signed.
+2. In **Package Center > Settings > Package Sources**, choose **Add** and enter any name (for example `Fungusware`) and the location `https://www.fungusware.com/synology`.
+3. Open **Package Center > Community**, find **Xackup Server** and choose **Install**. The same source also lists **Metis Dashboard**.
 4. Give the package's user access to the folder that holds your backups: **Control Panel > Shared Folder**, select the share, **Edit > Permissions**, set **System internal user** to show `sc-XackupServer` and give it **Read/Write**.
 5. Open `http://<nas>:19177` (the **Open** button in Package Center) and sign in as described below.
 
+**Without the package source:** download `XackupServer-x64-<version>.spk` (Intel and AMD models) or `XackupServer-arm64-<version>.spk` (ARM64 models) from the [Releases](https://github.com/Fungusware/Xackup/releases) page, choose **Manual Install** in Package Center and select the file. Then continue with step 4 above. Install a newer `.spk` over the old one to upgrade.
+
 The package runs as its own limited user, because DSM 7 does not let third-party packages run as root. Its data is in `/var/packages/XackupServer/var`. Optional settings go in `/var/packages/XackupServer/var/server.env`, one `NAME=value` per line, for example `XackupAPIUrl=http://0.0.0.0:8080`; restart the package afterwards.
 
-To upgrade, install the newer `.spk` over the old one with Manual Install; your data is kept. The package does not check for updates itself, so watch the Releases page. To remove it, uninstall it in Package Center.
+Your data is kept when you upgrade. To remove the package, uninstall it in Package Center.
 
 ## First sign-in and updates
 
