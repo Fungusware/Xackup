@@ -1,0 +1,15 @@
+{
+    "version":  "3.26.1109-2333",
+    "stamp":  "3.26.1109.2333",
+    "changelog":  "Fixes a crash on Linux when a job used a mounted network location. Installs over the old version and keeps your data.",
+    "x64":  {
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1109.2333/XackupServer-x64-3.26.1109-2333.spk",
+                "md5":  "6cebe697d28d4f445694786437a52de4",
+                "size":  55961600
+            },
+    "arm64":  {
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1109.2333/XackupServer-arm64-3.26.1109-2333.spk",
+                  "md5":  "f17598f2d943adf8ddf753732386a3ad",
+                  "size":  54231040
+              }
+}
