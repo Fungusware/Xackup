@@ -19,6 +19,9 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Job editor in the browser for Backup, Migration and Replication jobs, with the same rules and warnings as the desktop wizards: General, Machines, Destination, Compression, Retention, Tasks, Email and Advanced tabs, and a retention timeline.
 * Schedules: every schedule in plain words with its last result and next run. Add, edit, pause, remove and Run now. Timeline: every run of the last day to three months and what is due next.
 * Restore: bring a backup back as a new VM on a Xen server.
+* Extract: open a backup in the browser and look inside its disks, volumes and folders. Download files or folders (a folder or several items come as a zip), or save them to a folder on the server. A whole disk is saved as a VHD. Works with .xva, .xackup, .x2m and .xva.gz backups, including password protected ones. Needs the Elite or Xackup Server license. Differential (.xdiff) backups cannot be opened here.
+* Job page: a run that was aborted is marked Aborted, and can be deleted from the run history together with its log.
+* Settings, Advanced: Browse for the work folder. On Linux the folder pickers can now go up to the root folder.
 * Benchmarks: transfer rate, size and duration per VM and per job, with compare and CSV export.
 * Configuration: saved servers (with a network scan to find hosts), locations, email defaults, mount commands and advanced settings. Import and export jobs, servers and locations as a bundle or through Xackup Cloud.
 * Utilities: a Xen explorer for browsing everything a server holds, and Clean Up, which runs in the background.
