@@ -1,4 +1,9 @@
 {
+    "package":  "XackupServer",
+    "name":  "Xackup Server",
+    "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
+    "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
+    "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
     "version":  "3.26.1109-2333",
     "stamp":  "3.26.1109.2333",
     "changelog":  "Fixes a crash on Linux when a job used a mounted network location. Installs over the old version and keeps your data.",
