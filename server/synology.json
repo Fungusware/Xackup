@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1111-0658",
-    "stamp":  "3.26.1111.0658",
-    "changelog":  "New Blueprint look with a light/dark toggle, and a styled HTML completion email with the job log.",
+    "version":  "3.26.1111-1001",
+    "stamp":  "3.26.1111.1001",
+    "changelog":  "Jobs can use the default mail server from Settings.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.0658/XackupServer-x64-3.26.1111-0658.spk",
-                "md5":  "785b81c3c0696233eda3c0527d304ca4",
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.1001/XackupServer-x64-3.26.1111-1001.spk",
+                "md5":  "8ae5e022deeac51d7c390c47a1efdf91",
                 "size":  57118720
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.0658/XackupServer-arm64-3.26.1111-0658.spk",
-                  "md5":  "9ea4430858d24e5a8d04243764c010d6",
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.1001/XackupServer-arm64-3.26.1111-1001.spk",
+                  "md5":  "0aad8aff7f8748d1cc37bee962d80a74",
                   "size":  55388160
               }
 }
