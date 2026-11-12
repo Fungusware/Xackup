@@ -26,6 +26,9 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Configuration: saved servers (with a network scan to find hosts), locations, email defaults, mount commands and advanced settings. Import and export jobs, servers and locations as a bundle or through Xackup Cloud.
 * Email: a job can use the default mail server from Settings (server, port, SSL, user, password and from address). Change it once in Settings and every job that uses it follows. Jobs that already have their own mail server keep it.
 * Fixed the web page freezing while a job was starting, for example when its server could not be reached. Starting a job no longer holds up anything else you click.
+* Job editor redesigned: one list of machines with status, a steady layout where dependent options dim instead of appearing and disappearing, and clearer Email, Retention and Compression sections.
+* Job lists remember which groups you collapsed, per page, in your browser.
+* A job left locked by an editor that was open when the server stopped is unlocked at startup.
 * Utilities: a Xen explorer for browsing everything a server holds, and Clean Up, which runs in the background.
 * System: license activation, About and health checks, the server log, and the anonymous community transfer statistics.
 * Faster SMB backups (about 10 times) from full-size buffered writes, a watchdog for stalled transfers, and a timing line with a plain tip after every transfer.
