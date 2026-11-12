@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1111-1013",
-    "stamp":  "3.26.1111.1013",
-    "changelog":  "Fixed the web page freezing while a job was starting.",
+    "version":  "3.26.1112-0031",
+    "stamp":  "3.26.1112.0031",
+    "changelog":  "Job editor redesign, remembered collapsed groups on job lists, stale editing locks cleared at startup.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.1013/XackupServer-x64-3.26.1111-1013.spk",
-                "md5":  "97f82fd2ee454bb873575f202939c489",
-                "size":  57118720
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1112.0031/XackupServer-x64-3.26.1112-0031.spk",
+                "md5":  "9fda1d9e45b0ddd11322ccbb6d25f893",
+                "size":  57128960
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1111.1013/XackupServer-arm64-3.26.1111-1013.spk",
-                  "md5":  "237172eae6162c0f12b842f5b2e5bad7",
-                  "size":  55388160
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1112.0031/XackupServer-arm64-3.26.1112-0031.spk",
+                  "md5":  "370606e40dd72cc687a5b93aa6bcb252",
+                  "size":  55398400
               }
 }
