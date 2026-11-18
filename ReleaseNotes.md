@@ -29,6 +29,7 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Job editor redesigned: one list of machines with status, a steady layout where dependent options dim instead of appearing and disappearing, and clearer Email, Retention and Compression sections.
 * Job lists remember which groups you collapsed, per page, in your browser.
 * A job left locked by an editor that was open when the server stopped is unlocked at startup.
+* Fixed a Saved Server added in Settings not getting an ID until Xackup restarted. A job created against it then failed to start with "configured to use a Saved Server that no longer exists". Jobs already affected need to be opened with Edit, the server selected again, and saved.
 * Utilities: a Xen explorer for browsing everything a server holds, and Clean Up, which runs in the background.
 * System: license activation, About and health checks, the server log, and the anonymous community transfer statistics.
 * Faster SMB backups (about 10 times) from full-size buffered writes, a watchdog for stalled transfers, and a timing line with a plain tip after every transfer.
