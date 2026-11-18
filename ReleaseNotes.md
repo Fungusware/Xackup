@@ -47,6 +47,7 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * The Use Temporary files option is now on the Retention and Differentials tab of the replication wizard, and the Options tab is no longer hidden when differentials are on.
 * Export / Import speed improvements (upto 4x on high latency connections)
 * Fixed some Saved Location editing bugs.
+* Fixed a Saved Server added in Settings not getting an ID until Xackup was restarted. A job created against it then failed to start with "configured to use a Saved Server that no longer exists" after the restart. Jobs already affected need to be opened with Edit, the server selected again, and saved.
 * Added Main Toolbar Refresh buton added.
 * Fixed UI layout in Job Info Panels
 * Fixes for Licence Check in Wizards.
