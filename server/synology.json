@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1124-1214",
-    "stamp":  "3.26.1124.1214",
-    "changelog":  "Desktop: taller list headers; rows recolour on theme change.",
+    "version":  "3.26.1124-2247",
+    "stamp":  "3.26.1124.2247",
+    "changelog":  "Desktop: list header padding trimmed.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.1214/XackupServer-x64-3.26.1124-1214.spk",
-                "md5":  "3158159e9318438002c7d39fc957bca5",
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2247/XackupServer-x64-3.26.1124-2247.spk",
+                "md5":  "e82747705dc10a3d1a54e4fa77ba2da8",
                 "size":  57128960
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.1214/XackupServer-arm64-3.26.1124-1214.spk",
-                  "md5":  "6428fd480d35a1cd99c9b67ca9668c1f",
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2247/XackupServer-arm64-3.26.1124-2247.spk",
+                  "md5":  "f882c83d742823c25b67290230aa44cf",
                   "size":  55398400
               }
 }
