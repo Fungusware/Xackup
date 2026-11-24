@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1124-0922",
-    "stamp":  "3.26.1124.0922",
-    "changelog":  "The desktop app and the web page now share one theme library. Two new themes: Neon Synthwave and Bezier.",
+    "version":  "3.26.1124-1214",
+    "stamp":  "3.26.1124.1214",
+    "changelog":  "Desktop: taller list headers; rows recolour on theme change.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.0922/XackupServer-x64-3.26.1124-0922.spk",
-                "md5":  "c481efe356d17a504a5fa57d1005e4be",
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.1214/XackupServer-x64-3.26.1124-1214.spk",
+                "md5":  "3158159e9318438002c7d39fc957bca5",
                 "size":  57128960
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.0922/XackupServer-arm64-3.26.1124-0922.spk",
-                  "md5":  "ba05cfb09c9d4064498f41694d1c273a",
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.1214/XackupServer-arm64-3.26.1124-1214.spk",
+                  "md5":  "6428fd480d35a1cd99c9b67ca9668c1f",
                   "size":  55398400
               }
 }
