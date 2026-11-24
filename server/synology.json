@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1124-2323",
-    "stamp":  "3.26.1124.2323",
-    "changelog":  "Focused/default buttons use the themed colours; Windows installer can optionally back up your data before upgrading (-Backup, default no).",
+    "version":  "3.26.1124-2352",
+    "stamp":  "3.26.1124.2352",
+    "changelog":  "List headers now get the themed height (a fixed header cap in the job, schedule and saved-location lists no longer squashes them).",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2323/XackupServer-x64-3.26.1124-2323.spk",
-                "md5":  "e725067f75ec14a85910e0bef0496f4c",
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2352/XackupServer-x64-3.26.1124-2352.spk",
+                "md5":  "15d7ca943f0a6579a2d71db1360491d1",
                 "size":  57128960
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2323/XackupServer-arm64-3.26.1124-2323.spk",
-                  "md5":  "12e449457366fe4676e24491f2e5f792",
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2352/XackupServer-arm64-3.26.1124-2352.spk",
+                  "md5":  "e9c39ff93b98aa7403e4d1706c82e3df",
                   "size":  55398400
               }
 }
