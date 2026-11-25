@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1124-2352",
-    "stamp":  "3.26.1124.2352",
-    "changelog":  "List headers now get the themed height (a fixed header cap in the job, schedule and saved-location lists no longer squashes them).",
+    "version":  "3.26.1125-0956",
+    "stamp":  "3.26.1125.0956",
+    "changelog":  "XenServer 6.5 and older hosts are supported: Xackup connects to hosts that only speak XML-RPC automatically.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2352/XackupServer-x64-3.26.1124-2352.spk",
-                "md5":  "15d7ca943f0a6579a2d71db1360491d1",
-                "size":  57128960
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1125.0956/XackupServer-x64-3.26.1125-0956.spk",
+                "md5":  "895872a9e1bc095a32e9c66835a7f34a",
+                "size":  57139200
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1124.2352/XackupServer-arm64-3.26.1124-2352.spk",
-                  "md5":  "e9c39ff93b98aa7403e4d1706c82e3df",
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1125.0956/XackupServer-arm64-3.26.1125-0956.spk",
+                  "md5":  "04b9e3e173c36bfd0ef0fdf91fdbcae8",
                   "size":  55398400
               }
 }
