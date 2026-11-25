@@ -39,6 +39,12 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Desktop app (3.x): modern look with eight themes and outcome bars. It reconnects by itself when the server restarts.
 * License: only a valid Xackup Server license lets the web page change jobs, schedules and settings. With any other license, or none, the web page is read only: running jobs, existing schedules, start and stop, and restores still work. A Xackup Server license also unlocks the desktop app with every Elite feature.
 * Installer: the Windows installer is PowerShell and replaces the MSI. It removes an earlier Xackup 2.x install first and keeps its data.
+* Web page: a Blueprint theme with a light and dark toggle. The completion email is HTML and includes the job log.
+* Fixed the first save in Settings on a fresh install failing. It now creates the settings file.
+* Fixed saving a job in the editor without changing it storing the default mail server choice.
+* Fixed Saved Servers and Locations from an older install having no Id. They are repaired at startup.
+* Installer: upgrades can back up your data first (-Backup, or asked when run interactively; the default is no).
+* Desktop app (3.x): the themes come from the shared Fungusware themes package, with taller list headers and themed focused buttons.
 
 ###### Version 2.12.x.0 (Early Access)
 
