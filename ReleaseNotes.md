@@ -8,6 +8,7 @@ Find out what has changed in the Stable and Early Access versions.
 Xackup Server is the Xackup service with a web page you manage from any browser. Install it from the Xackup Server section of the README.
 
 * New: Xackup Server runs as a service on Windows x64, Linux x64 and ARM64 (systemd), and was tested on Synology DSM 7. Scheduled jobs run on the server, so nobody has to be signed in.
+* New: XenServer 6.5 and older hosts. They predate JSON-RPC, which the current XenServer SDK needs, so adding one failed with "unexpected error encountered while parsing value: <". Xackup now falls back to XML-RPC for such a host by itself: the normal login is tried first, and only if it fails this way is it retried once through the XML-RPC bridge. Current hosts connect exactly as before. Backups, snapshots, exports and the server test were checked on a XenServer 6.5.0 host. A 6.5 host cannot import a VM exported by a newer host, so restoring or replicating to 6.5 from a newer host is refused by the host.
 * One-line install for Windows (PowerShell) and Linux (shell), or unzip the package and run the installer. It starts at boot, listens on port 19177 and opens the firewall port when asked.
 * Upgrades in place and keeps jobs, saved servers and locations, users and the license. The web page shows an Update available button, with the command to run, when a newer release exists.
 * The Windows installer can install the Xackup desktop app with the server. The desktop app connects to the server on the same computer.
