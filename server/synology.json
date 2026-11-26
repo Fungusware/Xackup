@@ -4,17 +4,17 @@
     "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
     "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
     "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1125-2324",
-    "stamp":  "3.26.1125.2324",
-    "changelog":  "Connects to XenServer 6.5 and older hosts through an automatic XML-RPC fallback. Saved servers list now shows the locations that use a server.",
+    "version":  "3.26.1126-0049",
+    "stamp":  "3.26.1126.0049",
+    "changelog":  "Test results for saved servers and locations show in a pop-up.",
     "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1125.2324/XackupServer-x64-3.26.1125-2324.spk",
-                "md5":  "f395fc3f77c43dc67cbd3be38791f0a2",
+                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1126.0049/XackupServer-x64-3.26.1126-0049.spk",
+                "md5":  "e9b6977ce3dfe2e6f651d613ca1b2715",
                 "size":  57139200
             },
     "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1125.2324/XackupServer-arm64-3.26.1125-2324.spk",
-                  "md5":  "cdf650a74cd999ace3789751e8ce21d5",
-                  "size":  55398400
+                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1126.0049/XackupServer-arm64-3.26.1126-0049.spk",
+                  "md5":  "091ae1c3e4620f300c8c50b62e8f33e0",
+                  "size":  55408640
               }
 }
