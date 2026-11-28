@@ -14,7 +14,7 @@ Xackup is a commercial product that can be found here : https://www.xenserver-ba
 
 # Install
 
-Xackup 2.12 is the stable release. There is one release channel. Install with the Windows Installer or with PowerShell; both are supported and give the same result.
+These steps install the Xackup 2.12 desktop app, which is still supported. Install with the Windows Installer or with PowerShell; both are supported and give the same result. For Xackup 3, see [Xackup Server](#xackup-server).
 
 ## Windows Installer
 
@@ -62,9 +62,9 @@ When it finds existing data, the installer asks whether to back it up first (the
 Run `.\Uninstall-XackupDesktop.ps1` (add `-Purge` to delete your data too), or remove **Xackup v2** in Apps & features.
 
 
-# Xackup Server (preview)
+# Xackup Server
 
-Xackup Server runs Xackup as a service on Windows or Linux and gives you the whole of Xackup in a browser. Scheduled jobs run on the server, so nobody has to be signed in. It is the 3.x preview and is released next to Xackup 2.12: Xackup 2.12 and the desktop installers above are unchanged.
+Xackup Server runs Xackup as a service on Windows or Linux and gives you the whole of Xackup in a browser. Scheduled jobs run on the server, so nobody has to be signed in. It is Xackup 3, released alongside Xackup 2.12, which is still supported: Xackup 2.12 and the desktop installers above are unchanged.
 
 Requirements: Windows 10 (1607) or Windows Server 2016 and newer, 64-bit; or Linux x64 or ARM64 with systemd. Tested on Synology DSM 7 (also as a package, see below). Xackup Server brings its own .NET runtime.
 
@@ -122,7 +122,7 @@ Your data is kept when you upgrade. To remove the package, uninstall it in Packa
 
 Open `http://<server>:19177`. A new install has one account, `xackup` with the password `xackup`, and asks you to choose a new password. Users are Viewers (look only) or Operators.
 
-The web page shows an **Update available** button, with the command to run, when a newer Xackup Server release is out. Xackup Server releases are the ones tagged `3.*`; they are marked as pre-releases and never replace Xackup 2.12 as the latest release.
+The web page shows an **Update available** button, with the command to run, when a newer Xackup Server release is out. A Windows server installed in the default folder can also update itself with **Update now**. Xackup Server releases are the ones tagged `3.*`.
 
 ## Extracting files from a backup
 
