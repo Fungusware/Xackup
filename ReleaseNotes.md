@@ -3,7 +3,7 @@ Release Notes
 
 Find out what has changed in the Stable and Early Access versions.
 
-###### Version 3.0.x (Xackup Server, Preview)
+###### Version 3.0.x (Xackup Server)
 
 Xackup Server is the Xackup service with a web page you manage from any browser. Install it from the Xackup Server section of the README.
 
