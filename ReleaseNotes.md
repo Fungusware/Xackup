@@ -12,7 +12,7 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Saved servers: the list now shows the saved locations that are mounted through a server ("Used by 2 locations"), not only jobs. Before, it said "Not used by any job" for a server that Remove then refused because locations used it.
 * Testing a saved server or saved location from its edit dialog now shows the result in a pop-up over the editor. It used to appear below the fields, where it was easy to miss.
 * One-line install for Windows (PowerShell) and Linux (shell), or unzip the package and run the installer. It starts at boot, listens on port 19177 and opens the firewall port when asked.
-* Upgrades in place and keeps jobs, saved servers and locations, users and the license. The web page shows an Update available button, with the command to run, when a newer release exists.
+* Upgrades in place and keeps jobs, saved servers and locations, users and the license. When a newer release exists, the web page shows an Update available button with the command to run. A Windows server installed in the default folder can also update itself with Update now.
 * The Windows installer can install the Xackup desktop app with the server. The desktop app connects to the server on the same computer.
 * Sign in with Viewer and Operator accounts. A new install has one account, xackup, and asks for a new password at the first sign-in.
 * Overview: the 24 hour backup window, what is running now, what needs attention, and the last 30 days.
@@ -37,7 +37,7 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * System: license activation, About and health checks, the server log, and the anonymous community transfer statistics.
 * Faster SMB backups (about 10 times) from full-size buffered writes, a watchdog for stalled transfers, and a timing line with a plain tip after every transfer.
 * Linux and Synology: jobs run on Linux with remote CIFS and NFS locations. Jobs imported from Windows that use a \server\share path are refused on Linux with a clear message, so give them a Linux location.
-* Desktop app (3.x): modern look with eight themes and outcome bars. It reconnects by itself when the server restarts.
+* Desktop app (3.x): modern look (Fluent Light) with outcome bars. It reconnects by itself when the server restarts.
 * License: only a valid Xackup Server license lets the web page change jobs, schedules and settings. With any other license, or none, the web page is read only: running jobs, existing schedules, start and stop, and restores still work. A Xackup Server license also unlocks the desktop app with every Elite feature.
 * Installer: the Windows installer is PowerShell and replaces the MSI. It removes an earlier Xackup 2.x install first and keeps its data.
 * Web page: a Blueprint theme with a light and dark toggle. The completion email is HTML and includes the job log.
@@ -46,6 +46,12 @@ Xackup Server is the Xackup service with a web page you manage from any browser.
 * Fixed Saved Servers and Locations from an older install having no Id. They are repaired at startup.
 * Installer: upgrades can back up your data first (-Backup, or asked when run interactively; the default is no).
 * Desktop app (3.x): the themes come from the shared Fungusware themes package, with taller list headers and themed focused buttons.
+* The version number (3.YY.MMDD.HHMM) shows at the bottom of the menu and on System > About, which now has an Updates panel with Check for updates.
+* Update now: a Windows server installed in the default folder offers Operators this button when a newer release exists. It does not start while a job is running. Other Windows and Linux installs show the command to run, and Synology updates through Package Center.
+* Desktop app: fixed a crash when adding a new server, which also affected other screens with Browse buttons.
+* Desktop app: fixed text boxes and drop-down lists that were too tall, which left screens crowded and cut off some controls. New Server, Extract and Job Details have a new tab style with a border around each page.
+* Desktop app: it now always uses one theme, Fluent Light. The Theme menu has been removed.
+* Desktop app: fixed cut off and overlapping items, including Remove under Saved Hypervisors, the Xackup Log File button, a Migration option description and the text under the snapshot state list. Corrected several spelling mistakes.
 
 ###### Version 2.12.x.0 (Early Access)
 
