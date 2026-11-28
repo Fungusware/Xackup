@@ -1,20 +1,20 @@
 {
-    "package":  "XackupServer",
-    "name":  "Xackup Server",
-    "description":  "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
-    "icon72":  "https://www.fungusware.com/img/synology/xackupserver-72.png",
-    "icon256":  "https://www.fungusware.com/img/synology/xackupserver-256.png",
-    "version":  "3.26.1126-0049",
-    "stamp":  "3.26.1126.0049",
-    "changelog":  "Test results for saved servers and locations show in a pop-up.",
-    "x64":  {
-                "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1126.0049/XackupServer-x64-3.26.1126-0049.spk",
-                "md5":  "e9b6977ce3dfe2e6f651d613ca1b2715",
-                "size":  57139200
-            },
-    "arm64":  {
-                  "link":  "https://github.com/Fungusware/Xackup/releases/download/3.26.1126.0049/XackupServer-arm64-3.26.1126-0049.spk",
-                  "md5":  "091ae1c3e4620f300c8c50b62e8f33e0",
-                  "size":  55408640
-              }
+  "package": "XackupServer",
+  "name": "Xackup Server",
+  "description": "Back up, migrate, restore and replicate XenServer and XCP-ng virtual machines from a web page. Run it on the NAS that stores the backups.",
+  "icon72": "https://www.fungusware.com/img/synology/xackupserver-72.png",
+  "icon256": "https://www.fungusware.com/img/synology/xackupserver-256.png",
+  "version": "3.26.1128-1128",
+  "stamp": "3.26.1128.1128",
+  "changelog": "Version number and update information on the About page, desktop fixes, and a clearer layout.",
+  "x64": {
+    "link": "https://github.com/Fungusware/Xackup/releases/download/3.26.1128.1128/XackupServer-x64-3.26.1128-1128.spk",
+    "md5": "e389dc77f6de76b14a90fe0b0cc06326",
+    "size": 57241600
+  },
+  "arm64": {
+    "link": "https://github.com/Fungusware/Xackup/releases/download/3.26.1128.1128/XackupServer-arm64-3.26.1128-1128.spk",
+    "md5": "27629447386508dc3fca482c296d51fc",
+    "size": 55511040
+  }
 }
